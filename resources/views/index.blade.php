@@ -40,7 +40,7 @@
             <div class="container">
                 <div class="top-bar left">
                     <ul class="horizontal-menu">
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>Organic@company.com</a></li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>{{ env('APP_EMAIL') }}</a></li>
                         <li><a href="#">Free Shipping for all Order of $99</a></li>
                     </ul>
                 </div>
@@ -774,8 +774,8 @@
                             </form>
                         </div>
                         <div class="live-info">
-                            <p class="telephone"><i class="fa fa-phone" aria-hidden="true"></i><b class="phone-number">(+900) 123 456 7891</b></p>
-                            <p class="working-time">Mon-Fri: 8:30am-7:30pm; Sat-Sun: 9:30am-4:30pm</p>
+                            <p class="telephone"><i class="fa fa-phone" aria-hidden="true"></i><b class="phone-number">{{ env('APP_PHONE') }}</b></p>
+                            <p class="working-time">{{ env('APP_HOURS') }}</p>
                         </div>
                     </div>
                 </div>
@@ -3029,25 +3029,25 @@
                                     <li>
                                         <p class="info-item">
                                             <i class="biolife-icon icon-location"></i>
-                                            <b class="desc">7563 St. Vicent Place, Glasgow, Greater Newyork NH7689, UK </b>
+                                            <b class="desc">{{ env('APP_ADDRESS') }} </b>
                                         </p>
                                     </li>
                                     <li>
                                         <p class="info-item">
                                             <i class="biolife-icon icon-phone"></i>
-                                            <b class="desc">Phone: (+067) 234 789  (+068) 222 888</b>
+                                            <b class="desc">Phone: {{ env('APP_PHONE') }}</b>
                                         </p>
                                     </li>
                                     <li>
                                         <p class="info-item">
                                             <i class="biolife-icon icon-letter"></i>
-                                            <b class="desc">Email:  contact@company.com</b>
+                                            <b class="desc">Email:  {{ env('APP_EMAIL') }}</b>
                                         </p>
                                     </li>
                                     <li>
                                         <p class="info-item">
                                             <i class="biolife-icon icon-clock"></i>
-                                            <b class="desc">Hours: 7 Days a week from 10:00 am</b>
+                                            <b class="desc">Hours: {{ env('APP_HOURS') }}</b>
                                         </p>
                                     </li>
                                 </ul>

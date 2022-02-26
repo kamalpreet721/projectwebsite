@@ -7,7 +7,7 @@
         <div class="product-tab z-index-20 sm-margin-top-193px xs-margin-top-30px">
             <div class="container">
                 <div class="biolife-title-box">
-                    <span class="subtitle">All the best item for You</span>
+                    <span class="subtitle">All the best item for You Checkout This Products</span>
                     <h3 class="main-title">Related Products</h3>
                 </div>
                 <div class="biolife-tab biolife-tab-contain sm-margin-top-34px">

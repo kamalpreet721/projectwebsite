@@ -322,15 +322,15 @@
                     <div class="col-lg-6 col-sm-6 col-xs-12">
                         <div class="payment-methods">
                             <ul>
-                                <li><a href="#" class="payment-link"><img src="assets/images/card1.jpg" width="51"
+                                <li><a href="#" class="payment-link"><img src="{{ asset('assets/images/card1.jpg') }}" width="51"
                                             height="36" alt=""></a></li>
-                                <li><a href="#" class="payment-link"><img src="assets/images/card2.jpg" width="51"
+                                <li><a href="#" class="payment-link"><img src="{{ asset('assets/images/card2.jpg') }}" width="51"
                                             height="36" alt=""></a></li>
-                                <li><a href="#" class="payment-link"><img src="assets/images/card3.jpg" width="51"
+                                <li><a href="#" class="payment-link"><img src="{{ asset('assets/images/card3.jpg') }}" width="51"
                                             height="36" alt=""></a></li>
-                                <li><a href="#" class="payment-link"><img src="assets/images/card4.jpg" width="51"
+                                <li><a href="#" class="payment-link"><img src="{{ asset('assets/images/card4.jpg') }}" width="51"
                                             height="36" alt=""></a></li>
-                                <li><a href="#" class="payment-link"><img src="assets/images/card5.jpg" width="51"
+                                <li><a href="#" class="payment-link"><img src="{{ asset('assets/images/card5.jpg') }}" width="51"
                                             height="36" alt=""></a></li>
                             </ul>
                         </div>

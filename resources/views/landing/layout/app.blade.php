@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&amp;display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/nice-select.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/slick.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/main-color.css">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.png') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/nice-select.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main-color.css') }}">
 
 </head>
 
@@ -78,14 +78,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-2 col-md-6 col-xs-6">
-                        <a href="index-2.html" class="biolife-logo"><img src="assets/images/organic-3.png"
+                        <a href="{{ route('index') }}" class="biolife-logo"><img src="{{ asset('assets/images/organic-3.png') }}"
                                 alt="biolife logo" width="135" height="34"></a>
                     </div>
                     <div class="col-lg-6 col-md-7 hidden-sm hidden-xs">
                         <div class="primary-menu">
                             <ul class="menu biolife-menu clone-main-menu clone-primary-menu" id="primary-menu"
                                 data-menuname="main menu">
-                                <li class="menu-item"><a href="index-2.html">Home</a></li>
+                                <li class="menu-item"><a href="{{ route('index') }}">Home</a></li>
                             </ul>
                         </div>
                     </div>
@@ -102,15 +102,6 @@
                                             placeholder="Search here...">
                                         <select name="category">
                                             <option value="-1" selected>All Categories</option>
-                                            <option value="vegetables">Vegetables</option>
-                                            <option value="fresh_berries">Fresh Berries</option>
-                                            <option value="ocean_foods">Ocean Foods</option>
-                                            <option value="butter_eggs">Butter & Eggs</option>
-                                            <option value="fastfood">Fastfood</option>
-                                            <option value="fresh_meat">Fresh Meat</option>
-                                            <option value="fresh_onion">Fresh Onion</option>
-                                            <option value="papaya_crisps">Papaya & Crisps</option>
-                                            <option value="oatmeal">Oatmeal</option>
                                         </select>
                                         <button type="submit" class="btn-submit">go</button>
                                     </form>
@@ -219,7 +210,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-9">
                         <section class="footer-item">
-                            <a href="index-2.html" class="logo footer-logo"><img src="assets/images/organic-3.png"
+                            <a href="{{ route('index') }}" class="logo footer-logo"><img src="{{ asset('assets/images/organic-3.png') }}"
                                     alt="biolife logo" width="135" height="34"></a>
                             <div class="footer-phone-info">
                                 <i class="biolife-icon icon-head-phone"></i>
@@ -524,14 +515,14 @@
     <!-- Scroll Top Button -->
     <a class="btn-scroll-top"><i class="biolife-icon icon-left-arrow"></i></a>
 
-    <script src="assets/js/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.countdown.min.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/jquery.nicescroll.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/biolife.framework.js"></script>
-    <script src="assets/js/functions.js"></script>
+    <script src="{{ asset('assets/js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.countdown.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.nicescroll.min.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/js/biolife.framework.js') }}"></script>
+    <script src="{{ asset('assets/js/functions.js') }}"></script>
 </body>
 
 </html>

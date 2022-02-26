@@ -25,7 +25,7 @@
                                         </div>
                                         <div class="info">
                                             <b class="categories">Vegetables</b>
-                                            <h4 class="product-title"><a href="#" class="pr-name">{{ $product->name }}</a></h4>
+                                            <h4 class="product-title"><a href="{{ route('product.show',['product' => $product->id]) }}" class="pr-name">{{ $product->name }}</a></h4>
                                             <div class="price ">
                                                 <ins><span class="price-amount"><span class="currencySymbol">£</span>{{ $product->price }}</span></ins>
                                             </div>

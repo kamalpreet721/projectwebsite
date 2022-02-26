@@ -78,8 +78,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-2 col-md-6 col-xs-6">
-                        <a href="{{ route('index') }}" class="biolife-logo"><img src="{{ asset('assets/images/organic-3.png') }}"
-                                alt="biolife logo" width="135" height="34"></a>
+                        <a href="{{ route('index') }}" class="biolife-logo"><img
+                                src="{{ asset('assets/images/organic-3.png') }}" alt="biolife logo" width="135"
+                                height="34"></a>
                     </div>
                     <div class="col-lg-6 col-md-7 hidden-sm hidden-xs">
                         <div class="primary-menu">
@@ -120,17 +121,21 @@
                                     <a href="javascript:void(0)" class="link-to">
                                         <span class="icon-qty-combine">
                                             <i class="icon-cart-mini biolife-icon"></i>
-                                            <span class="qty">0</span>
+                                            @php $total = 0 @endphp
+                                            @foreach ((array) session('cart') as $id => $details)
+                                                @php $total += $details['price'] * $details['quantity'] @endphp
+                                            @endforeach
+                                            <span class="qty">1</span>
                                         </span>
                                         <span class="title">My Cart -</span>
-                                        <span class="sub-total">$0.00</span>
+                                        <span class="sub-total">${{ number_format($total,2) }}</span>
                                     </a>
                                     <div class="cart-content">
                                         <div class="cart-inner">
                                             <ul class="products">
                                             </ul>
                                             <p class="btn-control">
-                                                <a href="#" class="btn view-cart">view cart</a>
+                                                <a href="{{ route('cart.index') }}" class="btn view-cart">view cart</a>
                                                 <a href="#" class="btn">checkout</a>
                                             </p>
                                         </div>
@@ -210,8 +215,9 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-9">
                         <section class="footer-item">
-                            <a href="{{ route('index') }}" class="logo footer-logo"><img src="{{ asset('assets/images/organic-3.png') }}"
-                                    alt="biolife logo" width="135" height="34"></a>
+                            <a href="{{ route('index') }}" class="logo footer-logo"><img
+                                    src="{{ asset('assets/images/organic-3.png') }}" alt="biolife logo" width="135"
+                                    height="34"></a>
                             <div class="footer-phone-info">
                                 <i class="biolife-icon icon-head-phone"></i>
                                 <p class="r-info">
@@ -322,16 +328,21 @@
                     <div class="col-lg-6 col-sm-6 col-xs-12">
                         <div class="payment-methods">
                             <ul>
-                                <li><a href="#" class="payment-link"><img src="{{ asset('assets/images/card1.jpg') }}" width="51"
-                                            height="36" alt=""></a></li>
-                                <li><a href="#" class="payment-link"><img src="{{ asset('assets/images/card2.jpg') }}" width="51"
-                                            height="36" alt=""></a></li>
-                                <li><a href="#" class="payment-link"><img src="{{ asset('assets/images/card3.jpg') }}" width="51"
-                                            height="36" alt=""></a></li>
-                                <li><a href="#" class="payment-link"><img src="{{ asset('assets/images/card4.jpg') }}" width="51"
-                                            height="36" alt=""></a></li>
-                                <li><a href="#" class="payment-link"><img src="{{ asset('assets/images/card5.jpg') }}" width="51"
-                                            height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img
+                                            src="{{ asset('assets/images/card1.jpg') }}" width="51" height="36"
+                                            alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img
+                                            src="{{ asset('assets/images/card2.jpg') }}" width="51" height="36"
+                                            alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img
+                                            src="{{ asset('assets/images/card3.jpg') }}" width="51" height="36"
+                                            alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img
+                                            src="{{ asset('assets/images/card4.jpg') }}" width="51" height="36"
+                                            alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img
+                                            src="{{ asset('assets/images/card5.jpg') }}" width="51" height="36"
+                                            alt=""></a></li>
                             </ul>
                         </div>
                     </div>
@@ -523,6 +534,7 @@
     <script src="{{ asset('assets/js/slick.min.js') }}"></script>
     <script src="{{ asset('assets/js/biolife.framework.js') }}"></script>
     <script src="{{ asset('assets/js/functions.js') }}"></script>
+    <x-alert />
 </body>
 
 </html>

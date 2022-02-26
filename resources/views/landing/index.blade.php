@@ -18,7 +18,7 @@
                                 <li class="product-item">
                                     <div class="contain-product layout-default">
                                         <div class="product-thumb">
-                                            <a href="#" class="link-to-product">
+                                            <a href="{{ route('product.show',['product' => $product->id]) }}" class="link-to-product">
                                                 <img src="assets/images/products/p-05.jpg" alt="Vegetables" width="270" height="270" class="product-thumnail">
                                             </a>
                                             <a class="lookup btn_call_quickview" href="#"><i class="biolife-icon icon-search"></i></a>
@@ -33,7 +33,7 @@
                                                 <p class="message">{{ $product->description }}</p>
                                                 <div class="buttons">
                                                     <a href="#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                                    <a href="#" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add to cart</a>
+                                                    <a href="{{ route('cart.add',['product' => $product->id]) }}" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add to cart</a>
                                                     <a href="#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
                                                 </div>
                                             </div>

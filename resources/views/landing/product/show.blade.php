@@ -63,7 +63,7 @@
                             </div>
                         </div>
                         <div class="buttons">
-                            <a href="#" class="btn add-to-cart-btn">add to cart</a>
+                            <a href="{{ route('cart.add',['product' => $product->id]) }}" class="btn add-to-cart-btn">add to cart</a>
                             <p class="pull-row">
                                 <a href="#" class="btn wishlist-btn">wishlist</a>
                                 <a href="#" class="btn compare-btn">compare</a>
